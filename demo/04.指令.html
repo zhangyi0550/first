@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+          <script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script>
+    </head>
+    <body>
+    <div id="app">
+<div v-if="seen">我被显示了</div>
+  <!--: 冒号是V-bind的缩写 -->
+<img v-bind:src="imgs" alt="">
+<div :id="id">id值是8000</div>      
+    </div>
+    </body>
+   <script>
+       let data = {
+           msg:'hello stark',
+           seen:true,
+           imgs:'https://cn.vuejs.org/images/logo.png',
+           id:'8000'
+           
+       }
+       let vm = new Vue({
+           el:"#app",
+           data:data
+       })
+   </script>
+</html>
